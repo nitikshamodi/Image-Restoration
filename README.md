@@ -21,15 +21,19 @@ In this project we have used only grayscale images.  The process for colored ima
 ### Inverse Filter
 We know that
 
-g(x,y) = f(x,y)*h(x,y) + n(x,y)
+	g(x,y) = f(x,y)*h(x,y) + n(x,y)
 
 Applying Fourier transform we get:
 
 	G(u,v) = F(u,v) H(u,v) + N(u,v)
   
-Thus,  G(u,v)/H(u,v) = F(u,v) + N(u,v)/H(u,v)
+Thus,
 
-Thus,  F'(u,v) = F(u,v) + N(u,v)/H(u,v).
+	G(u,v)/H(u,v) = F(u,v) + N(u,v)/H(u,v)
+
+Thus,  
+
+	F'(u,v) = F(u,v) + N(u,v)/H(u,v).
 
 Thus, the original image can be approximated by taking the inverse fourier transform of F'(u,v)
 As we can see from the equation that this approximation does not eliminate the noise present in the sample. In case of no blur the image is restored. 
@@ -40,7 +44,7 @@ This filter takes into account the noise present in the system. It considers the
 ### Richardson Lucy Filter 
 Unlike the previous two methods this is a non linear method. This method is iterative and its recurrence relation is as follows:
 
-f'k+1(x,y) =f'k+(g(x,y) - f'k*h(x,y))*h(-x,-y) 
+	f'k+1(x,y) =f'k+(g(x,y) - f'k*h(x,y))*h(-x,-y) 
 
 In this method we do not use Fourier Transform and calculate the image in the spatial domain only. 
 
@@ -50,7 +54,7 @@ We use MSE and PSNR as a metric for evaluation of the images obtained after rest
 
 
 
-Read the report for more details. 
+##### Read the report for more details. 
 
 
 
