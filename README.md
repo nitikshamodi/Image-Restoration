@@ -10,3 +10,20 @@ Then, g(x,y) = f(x,y)*h(x,y) + n(x,y)
 
 Where * denotes convolution.
 The process of applying the blur function is convolution, i.e., some path of the image convoles into a pixel of the blurred image. If no noise is added to the system then we can restore the image by simply reversing the convolution process i.e. by using deconvolution. 
+In this project we use the gaussian blur function. 
+
+## The Noise process
+There can be many reasons for noise in a model such as thermal vibration, magnetic influence, temperature, etc.  Noise can be considered as a random process which is usually modelled using Gaussian additive noise. The noise is additive because it is added to noise that might be intrinsic in the system. It is defined by two parameters: mean and variance. 
+
+## Filters used for deblurring
+In this project we have used only grayscale images.  The process for colored images is the same. Each step has to be applied to the R, B and G channels separately. 
+
+### Inverse Filter
+We know that
+
+$ g(x,y) = f(x,y)*h(x,y) + n(x,y) $
+
+
+
+
+
